@@ -12,7 +12,10 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- LSP
 
 lvim.lsp.diagnostics.virtual_text = false
+
 lvim.lang.elm.formatting = { { exe = 'elm_format'} }
+lvim.lang.javascript.formatters = { { exe = 'eslint_d'} }
+lvim.lang.javascript.linters = { { exe = 'eslint_d'} }
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
