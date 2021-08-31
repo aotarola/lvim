@@ -1,5 +1,5 @@
 std = {
-	globals = {
+  globals = {
     "lvim",
     "require"
   }
