@@ -1,0 +1,6 @@
+std = {
+	globals = {
+    "lvim",
+    "require"
+  }
+}
