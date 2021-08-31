@@ -66,6 +66,12 @@ lvim.plugins = {
 	{ "nvim-treesitter/playground", event = "Bufread" },
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
 	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("user.colorizer").config()
+		end,
+	},
+	{
 		"ray-x/lsp_signature.nvim",
 		event = "InsertEnter",
 		config = function()

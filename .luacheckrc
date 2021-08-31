@@ -1,6 +1,8 @@
 std = {
   globals = {
     "lvim",
-    "require"
+    "require",
+    "pcall",
+    "vim"
   }
 }
