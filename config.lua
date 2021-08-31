@@ -32,10 +32,10 @@ lvim.builtin.which_key.mappings.T.h = { '<cmd>TSHighlightCapturesUnderCursor<cr>
 lvim.builtin.which_key.mappings.T.p = { '<cmd>TSPlaygroundToggle<cr>', 'Playgound' }
 lvim.builtin.which_key.mappings['z'] = { '<cmd>ZenMode<cr>', 'Zen' }
 lvim.builtin.which_key.mappings['r'] = {
-    name = 'Replace',
-    r = { "<cmd>lua require('spectre').open()<cr>", 'Replace' },
-    w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", 'Replace Word' },
-    f = { "<cmd>lua require('spectre').open_file_search()<cr>", 'Replace Buffer' },
+  name = 'Replace',
+  r = { "<cmd>lua require('spectre').open()<cr>", 'Replace' },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", 'Replace Word' },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", 'Replace Buffer' },
 }
 
 lvim.builtin.nvimtree.auto_open = 0
@@ -43,11 +43,11 @@ lvim.builtin.nvimtree.auto_open = 0
 -- Treesitter
 
 lvim.builtin.treesitter.ensure_installed = {
-    'python',
-    'elm',
-    'html',
-    'javascript',
-    'lua',
+  'python',
+  'elm',
+  'html',
+  'javascript',
+  'lua',
 }
 
 lvim.builtin.treesitter.highlight.enabled = true
@@ -57,103 +57,103 @@ lvim.builtin.treesitter.autotag.enable = true
 -- Additional Plugins
 
 lvim.plugins = {
-    { 'lunarvim/colorschemes' },
-    { 'lunarvim/onedarker' },
-    { 'folke/tokyonight.nvim' },
-    { 'folke/trouble.nvim', cmd = 'TroubleToggle' },
-    { 'sindrets/diffview.nvim', even = 'BufRead' },
-    { 'simrat39/symbols-outline.nvim', cmd = 'SymbolsOutline' },
-    { 'nvim-treesitter/playground', event = 'Bufread' },
-    { 'windwp/nvim-ts-autotag', event = 'InsertEnter' },
-    {
-        'norcalli/nvim-colorizer.lua',
-        config = function()
-            require('user.colorizer').config()
-        end,
-    },
-    {
-        'ray-x/lsp_signature.nvim',
-        event = 'InsertEnter',
-        config = function()
-            require('user.lsp_signature').config()
-        end,
-    },
-    {
-        'unblevable/quick-scope',
-        config = function()
-            require('user.quickscope')
-        end,
-    },
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require('user.blankline')
-        end,
-    },
-    {
-        'ruifm/gitlinker.nvim',
-        config = function()
-            require('user.gitlinker').config()
-        end,
-    },
-    {
-        'andymass/vim-matchup',
-        event = 'CursorMoved',
-        config = function()
-            require('user.matchup')
-        end,
-    },
-    {
-        'nacro90/numb.nvim',
-        event = 'BufRead',
-        config = function()
-            require('user.numb').config()
-        end,
-    },
-    {
-        'monaqa/dial.nvim',
-        event = 'BufRead',
-        config = function()
-            require('user.dial').config()
-        end,
-    },
-    {
-        'karb94/neoscroll.nvim',
-        config = function()
-            require('user.neoscroll').config()
-        end,
-    },
-    {
-        'vuki656/package-info.nvim',
-        config = function()
-            require('user.package-info')
-        end,
-        ft = 'json',
-    },
-    {
-        'rcarriga/nvim-notify',
-        event = 'BufRead',
-        config = function()
-            require('user.notify').config()
-        end,
-    },
-    {
-        'folke/zen-mode.nvim',
-        config = function()
-            require('user.zen').config()
-        end,
-    },
-    {
-        'blackCauldron7/surround.nvim',
-        config = function()
-            require('surround').setup({})
-        end,
-    },
-    {
-        'windwp/nvim-spectre',
-        event = 'BufRead',
-        config = function()
-            require('user.spectre').config()
-        end,
-    },
+  { 'lunarvim/colorschemes' },
+  { 'lunarvim/onedarker' },
+  { 'folke/tokyonight.nvim' },
+  { 'folke/trouble.nvim', cmd = 'TroubleToggle' },
+  { 'sindrets/diffview.nvim', even = 'BufRead' },
+  { 'simrat39/symbols-outline.nvim', cmd = 'SymbolsOutline' },
+  { 'nvim-treesitter/playground', event = 'Bufread' },
+  { 'windwp/nvim-ts-autotag', event = 'InsertEnter' },
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('user.colorizer').config()
+    end,
+  },
+  {
+    'ray-x/lsp_signature.nvim',
+    event = 'InsertEnter',
+    config = function()
+      require('user.lsp_signature').config()
+    end,
+  },
+  {
+    'unblevable/quick-scope',
+    config = function()
+      require('user.quickscope')
+    end,
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require('user.blankline')
+    end,
+  },
+  {
+    'ruifm/gitlinker.nvim',
+    config = function()
+      require('user.gitlinker').config()
+    end,
+  },
+  {
+    'andymass/vim-matchup',
+    event = 'CursorMoved',
+    config = function()
+      require('user.matchup')
+    end,
+  },
+  {
+    'nacro90/numb.nvim',
+    event = 'BufRead',
+    config = function()
+      require('user.numb').config()
+    end,
+  },
+  {
+    'monaqa/dial.nvim',
+    event = 'BufRead',
+    config = function()
+      require('user.dial').config()
+    end,
+  },
+  {
+    'karb94/neoscroll.nvim',
+    config = function()
+      require('user.neoscroll').config()
+    end,
+  },
+  {
+    'vuki656/package-info.nvim',
+    config = function()
+      require('user.package-info')
+    end,
+    ft = 'json',
+  },
+  {
+    'rcarriga/nvim-notify',
+    event = 'BufRead',
+    config = function()
+      require('user.notify').config()
+    end,
+  },
+  {
+    'folke/zen-mode.nvim',
+    config = function()
+      require('user.zen').config()
+    end,
+  },
+  {
+    'blackCauldron7/surround.nvim',
+    config = function()
+      require('surround').setup({})
+    end,
+  },
+  {
+    'windwp/nvim-spectre',
+    event = 'BufRead',
+    config = function()
+      require('user.spectre').config()
+    end,
+  },
 }

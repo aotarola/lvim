@@ -3,6 +3,7 @@ std = {
     "lvim",
     "require",
     "pcall",
-    "vim"
+    "vim",
+    "table"
   }
 }

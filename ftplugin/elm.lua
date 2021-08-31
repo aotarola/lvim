@@ -1,5 +1,5 @@
-lvim.lang.elm.formatting = { 
- { 
-    exe = 'elm_format'
- }
+lvim.lang.elm.formatting = {
+  {
+    exe = 'elm_format',
+  },
 }

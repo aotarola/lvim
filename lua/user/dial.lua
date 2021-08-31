@@ -1,12 +1,12 @@
 local M = {}
 
 M.config = function()
-	local status_ok, dial = pcall(require, "dial")
-	if not status_ok then
-		return
-	end
+  local status_ok, dial = pcall(require, 'dial')
+  if not status_ok then
+    return
+  end
 
-	vim.cmd([[
+  vim.cmd([[
   nmap <C-n> <Plug>(dial-increment)
   nmap <C-i> <Plug>(dial-decrement)
   vmap <C-n> <Plug>(dial-increment)
@@ -15,18 +15,18 @@ M.config = function()
   vmap g<C-i> <Plug>(dial-decrement-additional)
   ]])
 
-	dial.augends["custom#boolean"] = dial.common.enum_cyclic({
-		name = "boolean",
-		strlist = { "true", "false" },
-	})
-	table.insert(dial.config.searchlist.normal, "custom#boolean")
+  dial.augends['custom#boolean'] = dial.common.enum_cyclic({
+    name = 'boolean',
+    strlist = { 'true', 'false' },
+  })
+  table.insert(dial.config.searchlist.normal, 'custom#boolean')
 
-	-- For Languages which prefer True/False, e.g. python.
-	dial.augends["custom#Boolean"] = dial.common.enum_cyclic({
-		name = "Boolean",
-		strlist = { "True", "False" },
-	})
-	table.insert(dial.config.searchlist.normal, "custom#Boolean")
+  -- For Languages which prefer True/False, e.g. python.
+  dial.augends['custom#Boolean'] = dial.common.enum_cyclic({
+    name = 'Boolean',
+    strlist = { 'True', 'False' },
+  })
+  table.insert(dial.config.searchlist.normal, 'custom#Boolean')
 end
 
 return M
