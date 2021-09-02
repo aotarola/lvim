@@ -1,6 +1,7 @@
 lvim.lang.sh.formatters = {
   {
     exe = 'shfmt',
+    args = { '-i', '2' },
   },
 }
 
