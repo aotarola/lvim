@@ -85,12 +85,12 @@ lvim.plugins = {
       require('user.quickscope')
     end,
   },
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    config = function()
-      require('user.blankline')
-    end,
-  },
+  --   'lukas-reineke/indent-blankline.nvim',
+  -- {
+  --   config = function()
+  --     require('user.blankline')
+  --   end,
+  -- },
   {
     'ruifm/gitlinker.nvim',
     config = function()
