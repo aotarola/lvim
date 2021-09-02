@@ -131,13 +131,13 @@ lvim.plugins = {
     end,
     ft = 'json',
   },
-  {
-    'rcarriga/nvim-notify',
-    event = 'BufRead',
-    config = function()
-      require('user.notify').config()
-    end,
-  },
+  -- {
+  --   'rcarriga/nvim-notify',
+  --   event = 'BufRead',
+  --   config = function()
+  --     require('user.notify').config()
+  --   end,
+  -- },
   {
     'folke/zen-mode.nvim',
     config = function()
