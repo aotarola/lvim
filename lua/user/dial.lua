@@ -8,11 +8,11 @@ M.config = function()
 
   vim.cmd([[
   nmap <C-n> <Plug>(dial-increment)
-  nmap <C-i> <Plug>(dial-decrement)
+  nmap <C-e> <Plug>(dial-decrement)
   vmap <C-n> <Plug>(dial-increment)
-  vmap <C-i> <Plug>(dial-decrement)
-  vmap g<C-h> <Plug>(dial-increment-additional)
-  vmap g<C-i> <Plug>(dial-decrement-additional)
+  vmap <C-e> <Plug>(dial-decrement)
+  vmap g<C-n> <Plug>(dial-increment-additional)
+  vmap g<C-e> <Plug>(dial-decrement-additional)
   ]])
 
   dial.augends['custom#boolean'] = dial.common.enum_cyclic({
