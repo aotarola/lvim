@@ -43,6 +43,7 @@ lvim.builtin.nvimtree.auto_open = 0
 -- Treesitter
 
 lvim.builtin.treesitter.ensure_installed = {
+  'bash',
   'python',
   'elm',
   'html',
