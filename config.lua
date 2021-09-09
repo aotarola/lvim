@@ -92,6 +92,19 @@ lvim.plugins = {
   --   end,
   -- },
   {
+    'tzachar/cmp-tabnine',
+    config = function()
+      local tabnine = require('cmp_tabnine.config')
+      tabnine:setup({
+        max_lines = 1000,
+        max_num_results = 20,
+        sort = true,
+      })
+    end,
+    run = './install.sh',
+    requires = 'hrsh7th/nvim-cmp',
+  },
+  {
     'ruifm/gitlinker.nvim',
     config = function()
       require('user.gitlinker').config()
