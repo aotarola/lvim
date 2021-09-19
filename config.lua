@@ -13,10 +13,6 @@ lvim.keys.normal_mode['<C-s>'] = ':w<cr>'
 
 lvim.lsp.diagnostics.virtual_text = false
 
-lvim.lang.elm.formatting = { { exe = 'elm_format' } }
-lvim.lang.javascript.formatters = { { exe = 'eslint_d' } }
-lvim.lang.javascript.linters = { { exe = 'eslint_d' } }
-
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
@@ -92,19 +88,6 @@ lvim.plugins = {
   --   end,
   -- },
   {
-    'tzachar/cmp-tabnine',
-    config = function()
-      local tabnine = require('cmp_tabnine.config')
-      tabnine:setup({
-        max_lines = 1000,
-        max_num_results = 20,
-        sort = true,
-      })
-    end,
-    run = './install.sh',
-    requires = 'hrsh7th/nvim-cmp',
-  },
-  {
     'ruifm/gitlinker.nvim',
     config = function()
       require('user.gitlinker').config()
@@ -169,5 +152,10 @@ lvim.plugins = {
     config = function()
       require('user.spectre').config()
     end,
+  },
+  {
+    'iamcco/markdown-preview.nvim',
+    run = 'cd app && npm install',
+    ft = 'markdown',
   },
 }
