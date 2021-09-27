@@ -18,7 +18,6 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = 'left'
 lvim.builtin.nvimtree.show_icons.git = 0
-lvim.builtin.nvimtree.auto_open = 0
 lvim.builtin.nvimtree.ignore = { '.git', '.cache' }
 
 -- Whichkey
