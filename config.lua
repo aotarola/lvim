@@ -42,6 +42,8 @@ lvim.builtin.treesitter.ensure_installed = {
   'python',
   'elm',
   'html',
+  'css',
+  'json',
   'javascript',
   'lua',
 }
@@ -119,13 +121,13 @@ lvim.plugins = {
       require('user.neoscroll').config()
     end,
   },
-  {
-    'vuki656/package-info.nvim',
-    config = function()
-      require('user.package-info')
-    end,
-    ft = 'json',
-  },
+  -- {
+  --   'vuki656/package-info.nvim',
+  --   config = function()
+  --     require('user.package-info')
+  --   end,
+  --   ft = 'json',
+  -- },
   -- {
   --   'rcarriga/nvim-notify',
   --   event = 'BufRead',
