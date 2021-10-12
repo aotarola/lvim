@@ -51,6 +51,7 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.autotag.enable = true
+lvim.builtin.treesitter.indent.disable = { 'python' }
 
 -- Additional Plugins
 
@@ -74,6 +75,17 @@ lvim.plugins = {
     event = 'InsertEnter',
     config = function()
       require('user.lsp_signature').config()
+    end,
+  },
+  {
+    'folke/todo-comments.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('todo-comments').setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      })
     end,
   },
   {
